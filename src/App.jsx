@@ -63,9 +63,8 @@ function App({ Component, pageProps = { title: "index" } }) {
 
   return (
     <>
-      <button onClick={OpenUnity}>OOKOK</button>
-      {`Game Over! ${userName} ${score} points`}{" "}
-      <p onClick={() => setModalShow(true)}>Launch vertically centered modal</p>
+      <button onClick={OpenUnity}>Start Virtual Tour</button>
+      {/* {`Game Over! ${userName} ${score} points`}{" "} */}
       <div>
         <MyVerticallyCenteredModal
           show={modalShow}
