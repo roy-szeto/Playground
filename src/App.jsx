@@ -57,8 +57,7 @@ function App({ Component, pageProps = { title: "index" } }) {
 
   useEffect(function () {
     unityContext.on("GameOver", function (userName, score) {
-      setUserName(userName);
-      setScore(score);
+      setModalShow(true);
     });
   }, []);
 
@@ -72,20 +71,6 @@ function App({ Component, pageProps = { title: "index" } }) {
           show={modalShow}
           onHide={() => setModalShow(false)}
         />{" "}
-      </div>
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          ></a>
-        </header>
       </div>
       {unity == true && (
         <Unity
